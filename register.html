@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!--<link rel="stylesheet" href="/stylesheets/style.css">-->
+    <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">    <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">B<i class="fa fa-circle"></i><i class="fa fa-circle"></i>KROSSING</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <!--<li class="active"><a href="#">Домой</a> </li>-->
+          <li><a href="#">Регистрация</a> </li>
+          <li><a href="#">Вход</a> </li>
+          <!--<li><a href="#">Работы</a> </li>-->
+          <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+          <h1 class="text-center login-title">Регистрация
+            <div class="signup-wall">
+              <form action="/signup" method="POST" class="form-signin">
+                <input type="text" name="username" placeholder="Никнейм" required autofocus class="form-control">
+                <input type="password" name="password" placeholder="Пароль" required class="form-control nomargin">
+                <input type="email" name="email" placeholder="Email" required class="form-control">
+                <input type="text" name="firstName" placeholder="Имя" required class="form-control">
+                <input type="text" name="lastName" placeholder="Фамилия" required class="form-control">
+                <button type="submit" class="btn btn-primary btn-lg active">Зарегестрироваться</button><span class="clearfix"></span>
+              </form>
+            </div>
+            <div id="message">
+            </div>
+          </h1>
+        </div>
+      </div>
+    </div>
+  <div id="footer">
+    <div class="container">
+      <div class="row centered">
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-vk"></i></a>
+        <a href="#"><i class="fa fa-telegram"></i> </a>
+        <a href="#"><i class="fa fa-instagram"></i> </a>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

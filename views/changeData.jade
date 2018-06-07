@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    html
+        body
+        .navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/main')
+                        | B
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        | KROSSING
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        // <li class="active"><a href="#">Домой</a> </li>
+                        li
+                            a(href='/home') #{form}
+                        li
+                            a(href='/main') Выход
+                        // <li><a href="#">Работы</a> </li>
+                        li
+                            a(href='#')
+                                i.fa.fa-book(aria-hidden='true')
+        br
+
+        div.container.centered
+            h3 Изменение данных
+            div.row
+                div.col-sm-6.col-md-4.col-md-offset-4
+                    form(name='name' action='/changeData' method='POST')
+                        p Измените имя
+                        input(type="text", name='newFirstName' size="40")
+                        p Измените фамилию
+                        input(type="text", name='newLastName' size="40")
+                        p Измените ник
+                        input(type="text", name="newUsername", size="40")
+                        p Введите старый пароль
+                        input(type="password", name="oldPassword", size="40")
+                        p Введите новый пароль
+                        input(type="password", name="newPassword", size="40")
+                        p Повторите новый пароль
+                        input(type="password", name="repeatNewPassword", size="40")
+                        br
+                        br
+                        button(class='btn btn-lg btn-primary btn-block', type='submit') Изменить
+                        //btn.btn-primary.btn-lg.active(href='#', role='button', aria-pressed='true') Изменить данные
