@@ -26,9 +26,9 @@ block content
         h3 Введите уникальный номер, и книга добавиться на Вашу книжную полку
         div.row
             div.col-sm-6.col-md-4.col-md-offset-4
-                form(name='name' action='/search' method='POST')
+                form(name='name')
                     p Введите уникаьный номер
-                    input(type="text", name='searchUUID' size="40")
+                    input(type="text", id='searchUUID' size="40")
                     //p Измените фамилию
                     //input(type="text", name='newLastName' size="40")
                     //p Измените ник
@@ -43,6 +43,27 @@ block content
                     br
                     button(class='btn btn-lg btn-primary btn-block', type='submit') Ok
 
+         script.
+             $("form").submit(function (e) {
+                 e.preventDefault();
+                 let UUID = $('#searchUUID').val();
+                 $.ajax({
+                     type: "POST",
+                     url: "api/search",
+                     data: JSON.stringify({
+                         searchUUID: UUID
+                     }),
+                     dataType: "json",
+                     contentType: "application/json",
+                     success: function (data) {
+                         $('#result').empty();
+                         $('#result').append(`Название книги: ${data[0].title}  `);
+                         $('#result').append(`Автор: ${data[0].author}  `);
+                         $('#result').append(`Год публикации: ${data[0].yearPublishing}`)
+                     }
+                 })
+             })
+        form(id='result')
         #footer
             .container
                 .row.centered

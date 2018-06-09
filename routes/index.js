@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let User = require('../models/user');
+let Book = require('../models/book');
 let userController = require('../controllers/userController');
 let bookController = require('../controllers/bookController');
 
@@ -90,6 +91,29 @@ module.exports = function(passport){
     });
     router.get('/search', function (req, res) {
         res.render('search', {user: req.user, form: 'Выйти'});
+    });
+
+    router.post('/api/search', function (req, res) {
+        console.log(req.body.searchUUID);
+        Book.find({UUID: req.body.searchUUID}).then(result => res.json(result));
+    });
+
+    router.post('/api/registerBook', function (req, res) {
+        console.log('post');
+
+        bookController.add(req, res);
+        // console.log(`post = ${req.body.title}`);
+        // let book = new Book();
+        // book.title= req.body.title;
+        // book.author = req.body.author;
+        // book.yearPublishing = req.body.year;
+        //
+        // book.save().then(response => res.json(response));
+    });
+
+    router.get('/api/registerBook', function (req, res) {
+        console.log(`UUID = ${req.body.UUID}`);
+        Book.find({title: req.body.title}).then(result => res.json(result));
     });
 
     return router;
