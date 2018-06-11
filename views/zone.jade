@@ -1,0 +1,1334 @@
+extends layout
+
+block content
+    html
+        body
+        .navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='#')
+                        | B
+                        i.fa.fa-circle
+                        i.fa.fa-circle
+                        | KROSSING
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        // <li class="active"><a href="#">Домой</a> </li>
+                        li
+                            a(href='/register') Регистрация
+                        li
+                            a(href='/home') #{form}
+                        li
+                            a(href='/Contact') Зоны
+                        // <li><a href="#">Работы</a> </li>
+                        //li
+                            a(href='#')
+                                i.fa.fa-book(aria-hidden='true')
+        br
+        br
+        br
+        br
+        br
+        br
+        #comp-jca9d7y8bg.style-jca9di5pbg
+        #comp-jca9d7y8inlineContent.style-jca9di5pinlineContent
+            style(type='text/css', data-styleid='txtNew').
+                .txtNew {
+                    word-wrap: break-word;
+                    text-align: start;
+                    pointer-events: none;
+                }
+
+                .txtNew_override-left * {
+                    text-align: left !important;
+                }
+
+                .txtNew_override-right * {
+                    text-align: right !important;
+                }
+
+                .txtNew_override-center * {
+                    text-align: center !important;
+                }
+
+                .txtNew_override-justify * {
+                    text-align: justify !important;
+                }
+
+                .txtNew > * {
+                    pointer-events: auto;
+                }
+
+                .txtNew li {
+                    font-style: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ol, .txtNew ul {
+                    padding-left: 1.3em;
+                    padding-right: 0;
+                    margin-left: 0.5em;
+                    margin-right: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ul {
+                    list-style-type: disc;
+                }
+
+                .txtNew ol {
+                    list-style-type: decimal;
+                }
+
+                .txtNew ul ul, .txtNew ol ul {
+                    list-style-type: circle;
+                }
+
+                .txtNew ul ul ul, .txtNew ol ul ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul ol ul, .txtNew ol ol ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew p {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h1 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h2 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h3 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h4 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h5 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h6 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew a {
+                    color: inherit;
+                }
+            #comp-jca9836t.txtNew(data-packed='true', style='left: 113px; width: 239px; position: absolute; top: 107px;')
+                p.font_7
+                    span(style='letter-spacing:0.05em;') Пункт 1
+            style(type='text/css', data-styleid='txtNew').
+                .txtNew {
+                    word-wrap: break-word;
+                    text-align: start;
+                    pointer-events: none;
+                }
+
+                .txtNew_override-left * {
+                    text-align: left !important;
+                }
+
+                .txtNew_override-right * {
+                    text-align: right !important;
+                }
+
+                .txtNew_override-center * {
+                    text-align: center !important;
+                }
+
+                .txtNew_override-justify * {
+                    text-align: justify !important;
+                }
+
+                .txtNew > * {
+                    pointer-events: auto;
+                }
+
+                .txtNew li {
+                    font-style: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ol, .txtNew ul {
+                    padding-left: 1.3em;
+                    padding-right: 0;
+                    margin-left: 0.5em;
+                    margin-right: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ul {
+                    list-style-type: disc;
+                }
+
+                .txtNew ol {
+                    list-style-type: decimal;
+                }
+
+                .txtNew ul ul, .txtNew ol ul {
+                    list-style-type: circle;
+                }
+
+                .txtNew ul ul ul, .txtNew ol ul ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul ol ul, .txtNew ol ol ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew p {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h1 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h2 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h3 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h4 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h5 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h6 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew a {
+                    color: inherit;
+                }
+            #comp-jca9abr9.txtNew(data-packed='false', data-min-height='87', style='left: 113px; width: 189px; position: absolute; min-height: 87px; top: 164px;')
+                p.font_8(style='line-height:1.6em;')
+                    span(style='letter-spacing:0.05em;') Адрес
+                p.font_8(style='line-height:1.6em;')
+                    span(style='letter-spacing:0.05em;') Россия, г. Белгород, ул. Костюкова 46
+            style(type='text/css', data-styleid='txtNew').
+                .txtNew {
+                    word-wrap: break-word;
+                    text-align: start;
+                    pointer-events: none;
+                }
+
+                .txtNew_override-left * {
+                    text-align: left !important;
+                }
+
+                .txtNew_override-right * {
+                    text-align: right !important;
+                }
+
+                .txtNew_override-center * {
+                    text-align: center !important;
+                }
+
+                .txtNew_override-justify * {
+                    text-align: justify !important;
+                }
+
+                .txtNew > * {
+                    pointer-events: auto;
+                }
+
+                .txtNew li {
+                    font-style: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ol, .txtNew ul {
+                    padding-left: 1.3em;
+                    padding-right: 0;
+                    margin-left: 0.5em;
+                    margin-right: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ul {
+                    list-style-type: disc;
+                }
+
+                .txtNew ol {
+                    list-style-type: decimal;
+                }
+
+                .txtNew ul ul, .txtNew ol ul {
+                    list-style-type: circle;
+                }
+
+                .txtNew ul ul ul, .txtNew ol ul ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul ol ul, .txtNew ol ol ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew p {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h1 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h2 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h3 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h4 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h5 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h6 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew a {
+                    color: inherit;
+                }
+            #comp-jcaaao4w.txtNew(data-packed='false', data-min-height='57', style='left: 113px; width: 231px; position: absolute; min-height: 57px; top: 266px;')
+                p.font_8(style='line-height:1.6em;')
+                    span(style='letter-spacing:0.05em;')
+                p.font_8(style='line-height:1.6em;')
+                    span(style='letter-spacing:0.05em;')
+            style(type='text/css', data-styleid='txtNew').
+                .txtNew {
+                    word-wrap: break-word;
+                    text-align: start;
+                    pointer-events: none;
+                }
+
+                .txtNew_override-left * {
+                    text-align: left !important;
+                }
+
+                .txtNew_override-right * {
+                    text-align: right !important;
+                }
+
+                .txtNew_override-center * {
+                    text-align: center !important;
+                }
+
+                .txtNew_override-justify * {
+                    text-align: justify !important;
+                }
+
+                .txtNew > * {
+                    pointer-events: auto;
+                }
+
+                .txtNew li {
+                    font-style: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ol, .txtNew ul {
+                    padding-left: 1.3em;
+                    padding-right: 0;
+                    margin-left: 0.5em;
+                    margin-right: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ul {
+                    list-style-type: disc;
+                }
+
+                .txtNew ol {
+                    list-style-type: decimal;
+                }
+
+                .txtNew ul ul, .txtNew ol ul {
+                    list-style-type: circle;
+                }
+
+                .txtNew ul ul ul, .txtNew ol ul ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul ol ul, .txtNew ol ol ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew p {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h1 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h2 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h3 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h4 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h5 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h6 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew a {
+                    color: inherit;
+                }
+            #comp-jcaavark.txtNew(data-packed='false', data-min-height='59', style='left: 113px; width: 224px; position: absolute; min-height: 59px; top: 343px;')
+                p.font_8(style='line-height:1.6em;')
+                    span(style='letter-spacing:0.05em;')
+                p.font_8(style='line-height:1.6em;')
+                    span(style='letter-spacing:0.05em;')
+                        object(height='0')
+                            a.auto-generated-link(data-auto-recognition='true', data-content='info@my-domain.com', href='mailto:info@my-domain.com', data-type='mail')
+            style(type='text/css', data-styleid='txtNew').
+                .txtNew {
+                    word-wrap: break-word;
+                    text-align: start;
+                    pointer-events: none;
+                }
+
+                .txtNew_override-left * {
+                    text-align: left !important;
+                }
+
+                .txtNew_override-right * {
+                    text-align: right !important;
+                }
+
+                .txtNew_override-center * {
+                    text-align: center !important;
+                }
+
+                .txtNew_override-justify * {
+                    text-align: justify !important;
+                }
+
+                .txtNew > * {
+                    pointer-events: auto;
+                }
+
+                .txtNew li {
+                    font-style: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ol, .txtNew ul {
+                    padding-left: 1.3em;
+                    padding-right: 0;
+                    margin-left: 0.5em;
+                    margin-right: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ul {
+                    list-style-type: disc;
+                }
+
+                .txtNew ol {
+                    list-style-type: decimal;
+                }
+
+                .txtNew ul ul, .txtNew ol ul {
+                    list-style-type: circle;
+                }
+
+                .txtNew ul ul ul, .txtNew ol ul ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul ol ul, .txtNew ol ol ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew p {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h1 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h2 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h3 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h4 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h5 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h6 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew a {
+                    color: inherit;
+                }
+            #comp-jcfwmoki.txtNew(data-packed='true', style='left: 398px; width: 227px; position: absolute; top: 107px;')
+                p.font_7
+                    span(style='letter-spacing:0.05em;') Пункт 2
+            style(type='text/css', data-styleid='txtNew').
+                .txtNew {
+                    word-wrap: break-word;
+                    text-align: start;
+                    pointer-events: none;
+                }
+
+                .txtNew_override-left * {
+                    text-align: left !important;
+                }
+
+                .txtNew_override-right * {
+                    text-align: right !important;
+                }
+
+                .txtNew_override-center * {
+                    text-align: center !important;
+                }
+
+                .txtNew_override-justify * {
+                    text-align: justify !important;
+                }
+
+                .txtNew > * {
+                    pointer-events: auto;
+                }
+
+                .txtNew li {
+                    font-style: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ol, .txtNew ul {
+                    padding-left: 1.3em;
+                    padding-right: 0;
+                    margin-left: 0.5em;
+                    margin-right: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ul {
+                    list-style-type: disc;
+                }
+
+                .txtNew ol {
+                    list-style-type: decimal;
+                }
+
+                .txtNew ul ul, .txtNew ol ul {
+                    list-style-type: circle;
+                }
+
+                .txtNew ul ul ul, .txtNew ol ul ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul ol ul, .txtNew ol ol ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew p {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h1 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h2 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h3 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h4 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h5 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h6 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew a {
+                    color: inherit;
+                }
+            #comp-jcfwmoke.txtNew(data-packed='false', data-min-height='80', style='left: 398px; width: 189px; position: absolute; min-height: 80px; top: 164px;')
+                p.font_8(style='line-height:1.6em;')
+                    span(style='letter-spacing:0.05em;') Адрес
+                    span(style='letter-spacing:0.05em;') Россия, г. Белгород, пр-т Б. Хмельницкого 137г
+            style(type='text/css', data-styleid='txtNew').
+                .txtNew {
+                    word-wrap: break-word;
+                    text-align: start;
+                    pointer-events: none;
+                }
+
+                .txtNew_override-left * {
+                    text-align: left !important;
+                }
+
+                .txtNew_override-right * {
+                    text-align: right !important;
+                }
+
+                .txtNew_override-center * {
+                    text-align: center !important;
+                }
+
+                .txtNew_override-justify * {
+                    text-align: justify !important;
+                }
+
+                .txtNew > * {
+                    pointer-events: auto;
+                }
+
+                .txtNew li {
+                    font-style: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ol, .txtNew ul {
+                    padding-left: 1.3em;
+                    padding-right: 0;
+                    margin-left: 0.5em;
+                    margin-right: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew ul {
+                    list-style-type: disc;
+                }
+
+                .txtNew ol {
+                    list-style-type: decimal;
+                }
+
+                .txtNew ul ul, .txtNew ol ul {
+                    list-style-type: circle;
+                }
+
+                .txtNew ul ul ul, .txtNew ol ul ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul ol ul, .txtNew ol ol ul {
+                    list-style-type: square;
+                }
+
+                .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+                    padding-left: 0;
+                    padding-right: 1.3em;
+                    margin-left: 0;
+                    margin-right: 0.5em;
+                }
+
+                .txtNew p {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h1 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h2 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h3 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h4 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h5 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                .txtNew h6 {
+                    margin: 0;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+
+                /*.txtNew a {*/
+            ////        color: inherit;
+            ////    }
+            //#comp-jcfwmokl.txtNew(data-packed='false', data-min-height='57', style='left: 398px; width: 200px; position: absolute; min-height: 57px; top: 266px;')
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;') Tel
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;') 123-456-7890
+            //style(type='text/css', data-styleid='txtNew').
+            //    .txtNew {
+            //        word-wrap: break-word;
+            //        text-align: start;
+            //        pointer-events: none;
+            //    }
+            //
+            //    .txtNew_override-left * {
+            //        text-align: left !important;
+            //    }
+            //
+            //    .txtNew_override-right * {
+            //        text-align: right !important;
+            //    }
+            //
+            //    .txtNew_override-center * {
+            //        text-align: center !important;
+            //    }
+            //
+            //    .txtNew_override-justify * {
+            //        text-align: justify !important;
+            //    }
+            //
+            //    .txtNew > * {
+            //        pointer-events: auto;
+            //    }
+            //
+            //    .txtNew li {
+            //        font-style: inherit;
+            //        font-weight: inherit;
+            //        line-height: inherit;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew ol, .txtNew ul {
+            //        padding-left: 1.3em;
+            //        padding-right: 0;
+            //        margin-left: 0.5em;
+            //        margin-right: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew ul {
+            //        list-style-type: disc;
+            //    }
+            //
+            //    .txtNew ol {
+            //        list-style-type: decimal;
+            //    }
+            //
+            //    .txtNew ul ul, .txtNew ol ul {
+            //        list-style-type: circle;
+            //    }
+            //
+            //    .txtNew ul ul ul, .txtNew ol ul ul {
+            //        list-style-type: square;
+            //    }
+            //
+            //    .txtNew ul ol ul, .txtNew ol ol ul {
+            //        list-style-type: square;
+            //    }
+            //
+            //    .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+            //        padding-left: 0;
+            //        padding-right: 1.3em;
+            //        margin-left: 0;
+            //        margin-right: 0.5em;
+            //    }
+            //
+            //    .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+            //        padding-left: 0;
+            //        padding-right: 1.3em;
+            //        margin-left: 0;
+            //        margin-right: 0.5em;
+            //    }
+            //
+            //    .txtNew p {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h1 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h2 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h3 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h4 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h5 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h6 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew a {
+            //        color: inherit;
+            //    }
+            //#comp-jcfwmokn.txtNew(data-packed='false', data-min-height='59', style='left: 398px; width: 208px; position: absolute; min-height: 59px; top: 343px;')
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;') Email
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;')
+            //            object(height='0')
+            //                a.auto-generated-link(data-auto-recognition='true', data-type='mail')
+            //style(type='text/css', data-styleid='txtNew').
+            //    .txtNew {
+            //        word-wrap: break-word;
+            //        text-align: start;
+            //        pointer-events: none;
+            //    }
+            //
+            //    .txtNew_override-left * {
+            //        text-align: left !important;
+            //    }
+            //
+            //    .txtNew_override-right * {
+            //        text-align: right !important;
+            //    }
+            //
+            //    .txtNew_override-center * {
+            //        text-align: center !important;
+            //    }
+            //
+            //    .txtNew_override-justify * {
+            //        text-align: justify !important;
+            //    }
+            //
+            //    .txtNew > * {
+            //        pointer-events: auto;
+            //    }
+            //
+            //    .txtNew li {
+            //        font-style: inherit;
+            //        font-weight: inherit;
+            //        line-height: inherit;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew ol, .txtNew ul {
+            //        padding-left: 1.3em;
+            //        padding-right: 0;
+            //        margin-left: 0.5em;
+            //        margin-right: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew ul {
+            //        list-style-type: disc;
+            //    }
+            //
+            //    .txtNew ol {
+            //        list-style-type: decimal;
+            //    }
+            //
+            //    .txtNew ul ul, .txtNew ol ul {
+            //        list-style-type: circle;
+            //    }
+            //
+            //    .txtNew ul ul ul, .txtNew ol ul ul {
+            //        list-style-type: square;
+            //    }
+            //
+            //    .txtNew ul ol ul, .txtNew ol ol ul {
+            //        list-style-type: square;
+            //    }
+            //
+            //    .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+            //        padding-left: 0;
+            //        padding-right: 1.3em;
+            //        margin-left: 0;
+            //        margin-right: 0.5em;
+            //    }
+            //
+            //    .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+            //        padding-left: 0;
+            //        padding-right: 1.3em;
+            //        margin-left: 0;
+            //        margin-right: 0.5em;
+            //    }
+            //
+            //    .txtNew p {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h1 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h2 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h3 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h4 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h5 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h6 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew a {
+            //        color: inherit;
+            //    }
+            //#comp-jcaa09w9.txtNew(data-packed='true', style='left: 706px; width: 235px; position: absolute; top: 107px;')
+            //    p.font_7
+            //        span(style='letter-spacing:0.05em;') Customer service
+            //style(type='text/css', data-styleid='txtNew').
+            //    .txtNew {
+            //        word-wrap: break-word;
+            //        text-align: start;
+            //        pointer-events: none;
+            //    }
+            //
+            //    .txtNew_override-left * {
+            //        text-align: left !important;
+            //    }
+            //
+            //    .txtNew_override-right * {
+            //        text-align: right !important;
+            //    }
+            //
+            //    .txtNew_override-center * {
+            //        text-align: center !important;
+            //    }
+            //
+            //    .txtNew_override-justify * {
+            //        text-align: justify !important;
+            //    }
+            //
+            //    .txtNew > * {
+            //        pointer-events: auto;
+            //    }
+            //
+            //    .txtNew li {
+            //        font-style: inherit;
+            //        font-weight: inherit;
+            //        line-height: inherit;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew ol, .txtNew ul {
+            //        padding-left: 1.3em;
+            //        padding-right: 0;
+            //        margin-left: 0.5em;
+            //        margin-right: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew ul {
+            //        list-style-type: disc;
+            //    }
+            //
+            //    .txtNew ol {
+            //        list-style-type: decimal;
+            //    }
+            //
+            //    .txtNew ul ul, .txtNew ol ul {
+            //        list-style-type: circle;
+            //    }
+            //
+            //    .txtNew ul ul ul, .txtNew ol ul ul {
+            //        list-style-type: square;
+            //    }
+            //
+            //    .txtNew ul ol ul, .txtNew ol ol ul {
+            //        list-style-type: square;
+            //    }
+            //
+            //    .txtNew ul[dir="rtl"], .txtNew ol[dir="rtl"] {
+            //        padding-left: 0;
+            //        padding-right: 1.3em;
+            //        margin-left: 0;
+            //        margin-right: 0.5em;
+            //    }
+            //
+            //    .txtNew ul[dir="rtl"] ul, .txtNew ul[dir="rtl"] ol, .txtNew ol[dir="rtl"] ul, .txtNew ol[dir="rtl"] ol {
+            //        padding-left: 0;
+            //        padding-right: 1.3em;
+            //        margin-left: 0;
+            //        margin-right: 0.5em;
+            //    }
+            //
+            //    .txtNew p {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h1 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h2 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h3 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h4 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h5 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew h6 {
+            //        margin: 0;
+            //        line-height: normal;
+            //        letter-spacing: normal;
+            //    }
+            //
+            //    .txtNew a {
+            //        color: inherit;
+            //    }
+            //#comp-jcabukoa.txtNew(data-packed='false', data-min-height='33', style='left: 706px; width: 235px; position: absolute; min-height: 33px; top: 164px;')
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;') Tel
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;') 1-800-000-0000
+            //#comp-jcabux0t.txtNew(data-packed='false', data-min-height='57', style='left: 706px; width: 235px; position: absolute; min-height: 57px; top: 266px;')
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;') Email
+            //    p.font_8(style='line-height:1.6em;')
+            //        span(style='letter-spacing:0.05em;')
+            //            object(height='0')
+            //                a.auto-generated-link(data-auto-recognition='true', data-content='info@my-domain.com', href='mailto:info@my-domain.com', data-type='mail')
+            //#comp-jcadf07t.lb1(data-hide-prejs='true', style='width: 135px; left: 701px; position: absolute; top: 368px; height: 21px;')
+            //    ul#comp-jcadf07titemsContainer.lb1itemsContainer(aria-label='Social bar')
+            //        li#comp-jcadf07t0image.lb1imageItem(style='width: 21px; height: 21px; margin-bottom: 0px; margin-right: 17px; display: inline-block;')
+            //            a#comp-jcadf07t0imagelink.lb1imageItemlink(href='http://www.facebook.com/wix', target='_blank', data-content='http://www.facebook.com/wix', data-type='external', rel='nofollow')
+            //                #comp-jcadf07t0imageimage.lb1imageItemimage(data-image-info='{"imageData":{"link":{"type":"ExternalLink","id":"dataItem-jcadf08d1","metaData":{"isPreset":true,"schemaVersion":"1.0","isHidden":false},"url":"http://www.facebook.com/wix","target":"_blank"},"type":"Image","id":"dataItem-jcadf08d","metaData":{"isPreset":true,"schemaVersion":"2.0","isHidden":false},"title":"Black Facebook Icon","uri":"0fdef751204647a3bbd7eaa2827ed4f9.png","description":"","width":200,"height":200,"alt":"Black Facebook Icon"},"displayMode":"fill"}', data-style='position:absolute;width:21;height:21', style='width: 21px; height: 21px; position: absolute;')
+            //                    img#comp-jcadf07t0imageimageimage(alt='Black Facebook Icon', data-type='image', src='https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_42,h_42,al_c,usm_0.66_1.00_0.01/0fdef751204647a3bbd7eaa2827ed4f9.png', style='width: 21px; height: 21px; object-fit: cover;')
+            //        li#comp-jcadf07t1image.lb1imageItem(style='width: 21px; height: 21px; margin-bottom: 0px; margin-right: 17px; display: inline-block;')
+            //            a#comp-jcadf07t1imagelink.lb1imageItemlink(href='http://www.twitter.com/wix', target='_blank', data-content='http://www.twitter.com/wix', data-type='external', rel='nofollow')
+            //                #comp-jcadf07t1imageimage.lb1imageItemimage(data-image-info='{"imageData":{"link":{"type":"ExternalLink","id":"dataItem-jcadf08g1","metaData":{"isPreset":true,"schemaVersion":"1.0","isHidden":false},"url":"http://www.twitter.com/wix","target":"_blank"},"type":"Image","id":"dataItem-jcadf08g","metaData":{"isPreset":true,"schemaVersion":"2.0","isHidden":false},"title":"Black Twitter Icon","uri":"c7d035ba85f6486680c2facedecdcf4d.png","description":"","width":200,"height":200,"alt":"Black Twitter Icon"},"displayMode":"fill"}', data-style='position:absolute;width:21;height:21', style='width: 21px; height: 21px; position: absolute;')
+            //                    img#comp-jcadf07t1imageimageimage(alt='Black Twitter Icon', data-type='image', src='https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_42,h_42,al_c,usm_0.66_1.00_0.01/c7d035ba85f6486680c2facedecdcf4d.png', style='width: 21px; height: 21px; object-fit: cover;')
+            //        li#comp-jcadf07t2image.lb1imageItem(style='width: 21px; height: 21px; margin-bottom: 0px; margin-right: 17px; display: inline-block;')
+            //            a#comp-jcadf07t2imagelink.lb1imageItemlink(href='https://instagram.com/wix/', target='_blank', data-content='https://instagram.com/wix/', data-type='external', rel='nofollow')
+            //                #comp-jcadf07t2imageimage.lb1imageItemimage(data-image-info='{"imageData":{"link":{"type":"ExternalLink","id":"dataItem-jcadf08g9","metaData":{"isPreset":true,"schemaVersion":"1.0","isHidden":false},"url":"https://instagram.com/wix/","target":"_blank"},"type":"Image","id":"dataItem-jcadf08g8","metaData":{"isPreset":true,"schemaVersion":"2.0","isHidden":false},"title":"Black Instagram Icon","uri":"01c3aff52f2a4dffa526d7a9843d46ea.png","description":"","width":200,"height":200,"alt":"Black Instagram Icon"},"displayMode":"fill"}', data-style='position:absolute;width:21;height:21', style='width: 21px; height: 21px; position: absolute;')
+            //                    img#comp-jcadf07t2imageimageimage(alt='Black Instagram Icon', data-type='image', src='https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_42,h_42,al_c,usm_0.66_1.00_0.01/01c3aff52f2a4dffa526d7a9843d46ea.png', style='width: 21px; height: 21px; object-fit: cover;')
+            //        li#comp-jcadf07t3image.lb1imageItem(style='width: 21px; height: 21px; margin-bottom: 0px; margin-right: 17px; display: inline-block;')
+            //            a#comp-jcadf07t3imagelink.lb1imageItemlink(href='https://www.pinterest.com/wixcom/', target='_blank', data-content='https://www.pinterest.com/wixcom/', data-type='external', rel='nofollow')
+            //                #comp-jcadf07t3imageimage.lb1imageItemimage(data-image-info='{"imageData":{"link":{"type":"ExternalLink","id":"dataItem-jcadf08g7","metaData":{"isPreset":true,"schemaVersion":"1.0","isHidden":false},"url":"https://www.pinterest.com/wixcom/","target":"_blank"},"type":"Image","id":"dataItem-jcadf08g6","metaData":{"isPreset":true,"schemaVersion":"2.0","isHidden":false},"title":"Black Pinterest Icon","uri":"8f6f59264a094af0b46e9f6c77dff83e.png","description":"","width":200,"height":200,"alt":"Black Pinterest Icon"},"displayMode":"fill"}', data-style='position:absolute;width:21;height:21', style='width: 21px; height: 21px; position: absolute;')
+            //                    img#comp-jcadf07t3imageimageimage(alt='Black Pinterest Icon', data-type='image', src='https://static.wixstatic.com/media/8f6f59264a094af0b46e9f6c77dff83e.png/v1/fill/w_42,h_42,al_c,usm_0.66_1.00_0.01/8f6f59264a094af0b46e9f6c77dff83e.png', style='width: 21px; height: 21px; object-fit: cover;')
+            //#comp-jcab6t7t.cf1(data-state='   desktop left', data-dcf-columns='4', style='left: 113px; width: 755px; position: absolute; top: 483px; height: 241px;')
+            //    form#comp-jcab6t7tform-wrapper.cf1form-wrapper(role='form', aria-label='contact form', novalidate='')
+            //        #comp-jcab6t7twrapper.cf1wrapper
+

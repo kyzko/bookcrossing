@@ -35,7 +35,7 @@ userController.update = function (req, res) {
     } else
         newUsername = req.user.username;
     User.findByIdAndUpdate(req.user._id, {$set: {firstName: newFirstName, lastName: newLastName, username: newUsername}}, {new: true}).
-        then(result => res.render('home', {user: result}));
+    then(result => res.render('home', {user: result}));
 
 };
 

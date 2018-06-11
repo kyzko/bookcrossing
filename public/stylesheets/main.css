@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
 
 body {
-    background-color: #f2f2f2;
+    background-color: azure;
     font-family: "Lato";
     font-weight: 300;
     font-size:16px;
-    color: #555;
+    /*color: #555;*/
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -16,7 +16,7 @@ body {
 h1, h1, h3, h4, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
-    color: #5e556a;
+    color: darkblue;
 }
 
 p{
@@ -24,7 +24,7 @@ p{
     margin-bottom: 25px;
 }
 .centered {
-    text-align: center;
+    text-align: -webkit-center;
 }
 
 a {
@@ -50,24 +50,26 @@ hr {
     font-weight: 800;
     font-size: 14px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 27px;
 }
 
 .navbar-inverse {
-    background: #5e556a;
+    background: white;
+    /*background-color: #222;*/
+    /* border-color: #080808;
     /*border-color: #2aabd2;*/
 }
 
 .navbar-inverse .navbar-nav > .active > a {
-    background-color: #dfafbf;
+    background-color: lightgoldenrodyellow;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #faf0ef;
+    color: darkblue;
 }
 
 .navbar-inverse .navbar-brand{
-    color: #f8f7fd;
+    color: darkblue;
     font-weight: bolder;
     font-size: 22px;
     letter-spacing: 1px;
@@ -115,7 +117,7 @@ hr {
 }
 
 #dg {
-    background: #faf0ef;
+    background: azure;
     padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
@@ -148,12 +150,21 @@ hr {
     font-size: 35px;
 }
 #lg {
-    background: #fecbcf;
-    padding-top: 70px;
+    background: #fff0b2;
+    padding-top: 19px;
     padding-bottom: 70px;
     text-align: center;
 }
 #lg h4 {
+    font-size: 45px;
+}
+#lg1 {
+    background: lavenderblush;
+    padding-top: 19px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+#lg1 h4 {
     font-size: 45px;
 }
 #r {
@@ -170,20 +181,21 @@ hr {
 }
 
 #footer {
-    background: #5e556a;
+    background: white;
     position: fixed;
-    padding: 10px;
+    padding: 0px;
     width: 100%;
     left: 0; bottom: 0;
+    border-color: #f31414;
 }
 #footer i {
-    color: #faf0ef;
+    color: darkblue;
     font-size: 30px;
     padding: 10px 40px 10px 40px;
 }
 
 #footer i:hover {
-    color: #fecbcf;
+    color: #fff0b2;
 }
 .btn-primary.active  {
     color: #5e556a;
@@ -431,19 +443,21 @@ input:-webkit-autofill {
     height: 100px;
 }
 table {
-    background: url("https://html5book.ru/images/blurry.jpg") no-repeat;
-    background-position: 100% 55px;
+    /*background: url("https://html5book.ru/images/blurry.jpg") no-repeat;*/
+    background-position: center;
+    size: 1px;
 }
 th {
     font-weight: normal;
-    color: #339;
+    color: darkblue;
     padding: 10px 12px;
+    text-align: -webkit-center;
 }
 td {
     background: url("https://html5book.ru/images/back.png");
-    color: #669;
+    color: #000051;
     border-top: 1px solid white;
-    padding: 10px 12px;
+    padding: 16px 50px;
 }
 tr:hover td {
     background: url("https://html5book.ru/images/back.png");
@@ -480,19 +494,19 @@ body {
 .hide + label {
     margin: 0;
     padding: 0;
-    color: green;
+    color: #1f8fff;
     cursor: pointer;
-    display: inline-block;
+    display: -webkit-inline-box;
 }
 /* вид текста label при активном переключателе */
 .hide:checked + label {
-    color: red;
+    color: #1f8fff;
     border-bottom: 0;
 }
 /* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div {
-    display: block;
-    background: #efefef;
+    display: inline-table;
+    background:lightyellow;
     -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
     -webkit-box-shadow: inset 3px 3px 10px #7d8e8f;
     box-shadow: inset 3px 3px 10px #7d8e8f;
@@ -535,4 +549,68 @@ body {
 }
 .hide:checked + label:before {
     content: "\2212";
+}
+.style-jca9di5pinlineContent, .style-jca9di5pbg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 25px solid rgba(14, 52, 90, 1);
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+img {
+    width: 189px;
+    height: 255px;
+}
+ul, menu, dir {
+    display: inline-block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.star-rating__input{
+    display: none;
+}
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before
+{
+    content: "\f005";
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: azure ;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(255, 119, 225) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+.fancy-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.fancy-checkbox span:before {
+    font-family: "FontAwesome";
+    font-style: normal;
+    width: 1em;
+    height: 1em;
+    content: '\f10c';
+    margin-right: .3em;
+}
+
+.fancy-checkbox input[type="checkbox"]:checked ~ span:before {
+    content: '\f05d';
 }

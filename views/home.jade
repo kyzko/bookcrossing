@@ -20,6 +20,8 @@ block content
                             li
                                 a(href='/changeData') Изменить настройки профиля
                             li
+                                a(href='/registerBook') Зарегистрировать книгу
+                            li
                                 a(href='/main') #{form}
     br
     br
@@ -27,13 +29,11 @@ block content
     br
     br
     div.container
-        div.row
-            div.col-sm-6.col-md-4.col-md-offset-4
+        table
                 #user
-                    h1.login-title Мы рады Вашему возвращению, #{user.firstName}.
                         h3 Информация о пользователе
                         a(href='#')
-                            //img(alt='изображение пользователя')
+                            img(src='images/поперечный.jpg')
                         ul.user-details
                             li Имя пользователя: #{user.username}
                             li Email: #{user.email}
@@ -49,6 +49,8 @@ block content
             //a.btn.btn-primary.btn-lg.active(href='#', role='button', aria-pressed='true') Зарегестрировать книгу
             //a.btn.btn-primary.btn-lg.active(href='#', role='button', aria-pressed='true') Отпустить книгу
         .col-lg-2
+
+
         .col-lg-10.col-lg-offset-1
             img.img-responsive(src='')
     table
@@ -57,6 +59,7 @@ block content
             th Автор
             th Статус
             th Журнал
+            th Рейтинг
         tr
         each data in bookRegistered
             tr
@@ -66,55 +69,82 @@ block content
             td
                 .demo
                     input#hd-1.hide(type='checkbox')
-                    label(for='hd-1') Просмотреть информацию о журнале
+                    label(for='hd-1') Информация
                     div
                         table
                             tr
                                 th дата
                                 //th Статус
-                                th Уникальный номер
+                                th Зона буккроссинга
                             tr
-                                td 28-05-18
+                                td 2018-05-28
                                 //td= data.status
-                                td= data.UUID
-        tr
-            td Lois
-            td Griffin
-            td $150
-        tr
-            td Joe
-            td Swanson
-            td $300
-        tr
-            td Cleveland
-            td Brown
-            td $250
-    //.wood книжная полка
-    //    .wood
-    //        article.checklist
-    //            ul
-    //                li
-    //                    img(src='http://j.livelib.ru/boocover/1000512334/s/a67a/Devid%C2%A0Ejri__Logotip_i_firmennyj_stil._Rukovodstvo_dizajnera.png', alt='', title='Эйри Д.| Логотип и фирменный стиль. Руководство дизайнера')
-    //                    //img(src='http://aaalkhutov.narod.ru/img/Covers/mastercss.jpg', alt='', title='Мастерская CSS. Профессиональное применение Web-стандартов. Автор: Энди Бадд.')
-    //                    //img(src='http://i2.fastpic.ru/big/2010/0321/65/bbd48947c79dff00627f59529a42a365.jpg', alt='', title='Круг С. - Веб-дизайн. Книга Стива Круга или -не заставляйте меня думать!- (2-е издание) [2008, PDF, RUS]')
-    //                    //img(src='http://mexalib.com/pics/15270.jpg', alt='', title='В.А.Дронов | HTML 5, CSS 3 и Web 2.0. Разработка современных Web-сайтов [2011]')
-    //                    //img(src='http://cv01.twirpx.net/0273/0273091.jpg', alt='', title='Сырых Ю.А.| Современный веб-дизайн. Рисуем сайт, который продает')
-    //                    //img(src='http://static1.ozone.ru/multimedia/books_covers/c300/1004494945.jpg', alt='', title=' Веб-дизайн. Книга Якоба Нильсена')
-    //                li
-    //                    img(src='http://j.livelib.ru/boocover/1000512334/s/a67a/Devid%C2%A0Ejri__Logotip_i_firmennyj_stil._Rukovodstvo_dizajnera.png', alt='', title='Эйри Д.| Логотип и фирменный стиль. Руководство дизайнера')
-    //                    //img(src='http://lib.karraba.net/wp-content/uploads/2014/05/4240-dizayn_dlya_nedizaynerov-300x420.jpg', alt='', title='Робин Вильямс | Дизайн для недизайнеров.')
-    //                    //img(src='http://lib.karraba.net/wp-content/uploads/2014/05/red_diz-300x389.jpg', alt='', title='Ян Уайт | Редактируем дизайном.')
-    //                    //img(src='http://lib.karraba.net/wp-content/uploads/2014/05/53275-300x438.jpg', alt='', title=' Ян Чихольд | Новая типографика.')
-    //                    //img(src='http://artageless.com/images/library/design/new-styles-web-design.jpg', alt='', title=' Курт Клонингер | Свежие стили Web-дизайна. Как сделать из вашего сайта -конфетку-.')
-    //                li
+                                td г. Белгород, ул. Костюкова 46
+                            tr
+                                td 2018-06-02
+                                //td= data.status
+                                td г. Белгород, пр-т Б. Хмельницкого 138г
+            td
+                .star-rating
+                    .star-rating__wrap
+                        input#star-rating-5.star-rating__input(type='radio', name='rating', value='1' alert='cj')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-5', title='1 out of 5 stars')
+                        input#star-rating-4.star-rating__input(type='radio', name='rating', value='4')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-4', title='4 out of 5 stars')
+                        input#star-rating-3.star-rating__input(type='radio', name='rating', value='3')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-3', title='3 out of 5 stars')
+                        input#star-rating-2.star-rating__input(type='radio', name='rating', value='2')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-2', title='2 out of 5 stars')
+                        input#star-rating-1.star-rating__input(type='radio', name='rating', value='1')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-1', title='1 out of 5 stars')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-5', title='5 out of 5 stars')
+                        input#star-rating-4.star-rating__input(type='radio', name='rating', value='4')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-4', title='4 out of 5 stars')
+                        input#star-rating-3.star-rating__input(type='radio', name='rating', value='3')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-3', title='3 out of 5 stars')
+                        input#star-rating-2.star-rating__input(type='radio', name='rating', value='2')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-2', title='2 out of 5 stars')
+                        input#star-rating-1.star-rating__input(type='radio', name='rating', value='1')
+                        label.star-rating__ico.fa.fa-star-o.fa-lg(for='star-rating-1', title='1 out of 5 stars')
+                        br
+                        i.fa.fa-angellist(aria-hidden='true')
+    #lg1
+        .container
+            .row
+                h3 Друзья по интересам
+                .container.w
+                    .row.centered
+                        table
+                            tr
+                                th Наименование книги
+                                th Автор
+                                th Оценка
+                                th Статус
+                                th
+                            tr
+                                tr
+                                td Горе от ума
+                                td Грибоедов
+                                td 9.5
+                                td отпущена
+                                td
+                                    ul
+                                        li
+                                            label.fancy-checkbox
+                                                input(type='checkbox')
+                                                span Прочитана
+                                        li
+                                            label.fancy-checkbox
+                                                input(type='checkbox')
+                                                span Не интересует
+                                        li
+                                            label.fancy-checkbox
+                                                input(type='checkbox')
+                                                span Поймать
 
-    //#lg
-    //    .container
-    //        .row.centered
-    //            h4 здесь выпадающая информация
-    //            .col-lg-2.col-lg-offset-1
-    //                //пока так что вывод посмотреть
-    //                a #{user.username}
+
+
+
     #footer
         .container
             .row.centered
@@ -124,7 +154,7 @@ block content
                     i.fa.fa-facebook
                 a(href='#')
                     i.fa.fa-vk
-                a(href='#')
+                //a(href='#')
                     i.fa.fa-telegram
                 a(href='#')
                     i.fa.fa-instagram

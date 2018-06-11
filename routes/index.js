@@ -1,10 +1,11 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 let User = require('../models/user');
+let Book = require('../models/book');
 let userController = require('../controllers/userController');
 let bookController = require('../controllers/bookController');
 
-var isAuthenticated = function (req, res, next) {
+let isAuthenticated = function (req, res, next) {
     // if user is authenticated in the session, call the next() to call the next request handler
     // Passport adds this method to request object. A middleware is allowed to add properties to
     // request and response objects
@@ -12,9 +13,19 @@ var isAuthenticated = function (req, res, next) {
         return next();
     // if the user is not authenticated then redirect him to the login page
     res.redirect('/');
-}
+};
 
 module.exports = function(passport){
+
+    function authChecker(req, res, next) {
+        if (req.user || req.path==='/' || req.path === '/signup' || req.path === '/login' || req.path === '/main ') {
+            next();
+        } else {
+            res.redirect('/');
+        }
+    }
+
+    router.use(authChecker);
 
     /* GET login page. */
     router.get('/', function(req, res) {
@@ -54,9 +65,8 @@ module.exports = function(passport){
     });
 
     router.get('/main', function (req, res) {
-        if (req.user.username)
-            res.render('main', {user: req.user, form: 'Выход'});
-        else req.render('main', {form: 'Вход', message: 'Зарегистрируйтесь!'});
+        res.render('main', {user: req.user, form: 'Выход'});
+
     });
 
     router.get('/changeData', function (req, res) {
@@ -83,5 +93,33 @@ module.exports = function(passport){
         res.render('search', {user: req.user, form: 'Выйти'});
     });
 
+    router.post('/api/search', function (req, res) {
+        console.log(req.body.searchUUID);
+        Book.find({UUID: req.body.searchUUID}).then(result => res.json(result));
+    });
+
+    router.post('/api/registerBook', function (req, res) {
+        console.log('post');
+
+        bookController.add(req, res);
+        // console.log(`post = ${req.body.title}`);
+        // let book = new Book();
+        // book.title= req.body.title;
+        // book.author = req.body.author;
+        // book.yearPublishing = req.body.year;
+        //
+        // book.save().then(response => res.json(response));
+    });
+
+    router.get('/api/registerBook', function (req, res) {
+        console.log(`UUID = ${req.body.UUID}`);
+        Book.find({title: req.body.title}).then(result => res.json(result));
+    });
+
     return router;
+
 };
+router.get('/zone', function (req, res) {
+    res.render('zone');
+
+});
